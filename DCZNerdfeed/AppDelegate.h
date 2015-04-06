@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// No changes made to application yet
 
 @end
 
