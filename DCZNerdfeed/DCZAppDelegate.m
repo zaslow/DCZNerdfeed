@@ -6,17 +6,27 @@
 //  Copyright (c) 2015 Dean Zaslow. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DCZAppDelegate.h"
+#import "DCZCoursesViewController.h"
 
-@interface AppDelegate ()
+@interface DCZAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation DCZAppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    DCZCoursesViewController *cvc = [[DCZCoursesViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cvc];
+    
+    self.window.rootViewController = nav;
+    
     return YES;
 }
 
